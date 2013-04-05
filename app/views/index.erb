@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>veryshorturls.co.nz</h1>
+  <p>Insert a URL</p>
+
+	<form method="post" action="/urls">
+		<input type="text" name="url" placeholder="insert your url here">
+		<button type="submit" value="Submit">click here for a short url!!</button>
+	</form>
+
+	<% if @url %>
+		<p>
+		  Your url is 
+		  <a href="http://localhost:9393/<%= @url.short_url %>">
+		  	http://veryshorturls.co.nz/<%= @url.short_url %>
+		  </a>
+		</p>
+		<p>
+		  This url has been displayed <%= @url.counter %> times.
+		</p>
+	<% end %>
+	
+</div>
+
+
